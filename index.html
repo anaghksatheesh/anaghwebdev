@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Anagh K Satheesh | Web Developer (JavaScript, Firebase, PWA)</title>
+<meta name="description" content="Portfolio of Anagh K Satheesh, a web developer from Kerala, India. Adhyora, a college management SaaS PWA, and Deck of Deception, a realtime multiplayer browser game.">
+<link rel="canonical" href="https://anagh.pixelaks.in/web/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#14171f;--mut:#5b6474;--line:#e4e7ee;--card:#f6f8fc;--acc:#2f5bff;--acc2:#e9eeff}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1017;--fg:#e8ecf5;--mut:#98a2b8;--line:#232a39;--card:#141925;--acc:#7f9cff;--acc2:#1b2340}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font:17px/1.65 Inter,system-ui,sans-serif}
+a{color:var(--acc)}
+.w{max-width:960px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);z-index:5}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:60px}
+nav b{font-weight:700}
+nav a{margin-left:22px;text-decoration:none;color:var(--mut);font-size:.95rem}
+nav a:hover{color:var(--acc)}
+.hero{padding:96px 0 72px}
+.mono{font-family:'JetBrains Mono',monospace;color:var(--acc);font-size:.9rem}
+h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;margin:14px 0 20px;letter-spacing:-.02em}
+.hero p.lead{max-width:640px;color:var(--mut);font-size:1.15rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 22px;border-radius:10px;border:1px solid var(--line);text-decoration:none;font-weight:600;color:var(--fg)}
+.btn.m{background:var(--acc);border-color:var(--acc);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:1.7rem;margin-bottom:8px;letter-spacing:-.01em}
+.sub{color:var(--mut);margin-bottom:28px;max-width:640px}
+.proj{display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;margin-bottom:56px}
+.proj:last-child{margin-bottom:0}
+.proj img{width:100%;border-radius:14px;border:1px solid var(--line);background:var(--card);aspect-ratio:16/10;object-fit:cover}
+.proj h3{font-size:1.45rem;margin:6px 0 10px}
+.proj p{color:var(--mut)}
+.proj ul{margin:14px 0 0 18px;color:var(--mut)}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.tags span{background:var(--acc2);color:var(--acc);font-size:.8rem;font-weight:600;padding:4px 10px;border-radius:99px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h4{margin-bottom:10px}
+.card li{list-style:none;color:var(--mut);padding:2px 0}
+.learn{border-style:dashed}
+.row{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.row span{color:var(--mut);font-size:.9rem}
+.row p{color:var(--mut)}
+footer{padding:48px 0 72px;border-top:1px solid var(--line)}
+@media(max-width:760px){.proj{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}nav a{margin-left:14px}}
+
+.hero{position:relative;overflow:hidden;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:44px 44px;-webkit-mask-image:none}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 30% 40%,transparent 0,var(--bg) 75%);pointer-events:none}
+.hero .w{position:relative;z-index:2}
+.hgrid{display:grid;grid-template-columns:1.25fr 1fr;gap:40px;align-items:center}
+.blob{position:absolute;border-radius:50%;filter:blur(90px);opacity:.45;z-index:1;animation:fl 14s ease-in-out infinite}
+.b1{width:420px;height:420px;background:#2f5bff;top:-120px;left:-80px}
+.b2{width:360px;height:360px;background:#a855f7;bottom:-140px;right:-60px;animation-delay:-6s}
+@keyframes fl{50%{transform:translate(40px,30px) scale(1.12)}}
+h1 em{font-style:normal;background:linear-gradient(100deg,#2f5bff,#a855f7 60%,#ec4899);-webkit-background-clip:text;background-clip:text;color:transparent}
+.term{background:#0b0f19;color:#d6deff;border:1px solid #2a3350;border-radius:14px;box-shadow:0 30px 70px -20px rgba(47,91,255,.5);font:500 .84rem/1.7 'JetBrains Mono',monospace;overflow:hidden;animation:fl 9s ease-in-out infinite}
+.term .bar{display:flex;gap:7px;padding:11px 14px;background:#131a2b;border-bottom:1px solid #2a3350}
+.term .bar i{width:11px;height:11px;border-radius:50%;background:#ff5f57}.term .bar i:nth-child(2){background:#febc2e}.term .bar i:nth-child(3){background:#28c840}
+.term pre{padding:16px 18px;min-height:250px;white-space:pre-wrap}
+.term .k{color:#c792ea}.term .s{color:#a5e8a0}.term .p{color:#82aaff}
+.term .cur{display:inline-block;width:8px;height:1em;background:#82aaff;vertical-align:-2px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.strip{overflow:hidden;border-block:1px solid var(--line);background:var(--card);padding:14px 0;white-space:nowrap}
+.strip div{display:inline-block;animation:mq 28s linear infinite}
+.strip span{font:600 .95rem 'JetBrains Mono',monospace;color:var(--mut);margin:0 26px}
+.strip span:nth-child(even){color:var(--acc)}
+@keyframes mq{to{transform:translateX(-50%)}}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.proj img{transition:transform .25s ease,box-shadow .25s ease;box-shadow:0 20px 50px -25px rgba(47,91,255,.55);will-change:transform}
+.card{transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:var(--acc);box-shadow:0 18px 40px -22px var(--acc)}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{font:600 .95rem Inter,sans-serif;padding:10px 20px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;transition:.2s}
+.tabs button.on{background:var(--acc);border-color:var(--acc);color:#fff}
+.demo{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.pane{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px;min-height:230px}
+.pane h4{font-size:1.2rem;margin-bottom:10px}
+.pane li{margin:6px 0 0 18px;color:var(--mut)}
+.pane .flow{font:500 .85rem/2 'JetBrains Mono',monospace;color:var(--acc)}
+.bell{display:inline-block;animation:ring 2.4s ease-in-out infinite;transform-origin:50% 0}
+@keyframes ring{0%,60%,100%{transform:rotate(0)}65%{transform:rotate(14deg)}75%{transform:rotate(-12deg)}85%{transform:rotate(8deg)}}
+@media(max-width:760px){.hgrid,.demo{grid-template-columns:1fr}.term pre{min-height:210px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Anagh K Satheesh","jobTitle":"Web Developer","url":"https://anagh.pixelaks.in/web/","sameAs":["https://www.linkedin.com/in/anagh-k-satheesh-3914b0253","https://github.com/anaghksatheesh","https://pixelaks.in"],"knowsAbout":["JavaScript","HTML","CSS","Firebase","Progressive Web Apps"]}
+</script>
+</head>
+<body>
+<nav><div class="w"><b>Anagh K Satheesh</b><div><a href="#work">Work</a><a href="#inside">Inside Adhyora</a><a href="#skills">Skills</a><a href="#path">Path</a><a href="#contact">Contact</a></div></div></nav>
+
+<header class="hero"><div class="blob b1"></div><div class="blob b2"></div><div class="w hgrid"><div>
+  <p class="mono">Web developer &middot; Kerala, India</p>
+  <h1>I build web apps that <em>real people use</em>, from interface to backend.</h1>
+  <p class="lead">Solo developer of Adhyora, a college management SaaS with five role-based portals, running at a live college, and Deck of Deception, a realtime multiplayer game that runs in the browser. Built with HTML, CSS, JavaScript and Firebase.</p>
+  <div class="btns"><a class="btn m" href="#work">See my work</a><a class="btn" href="AnaghKSatheesh-WebDeveloper-CV.pdf" download>Download CV</a><a class="btn" href="#contact">Get in touch</a></div>
+</div><aside class="term" aria-hidden="true"><div class="bar"><i></i><i></i><i></i></div><pre id="code"></pre></aside></div></header>
+
+<div class="strip" aria-hidden="true"><div><span>HTML5</span><span>CSS3</span><span>JAVASCRIPT</span><span>FIREBASE</span><span>FIRESTORE</span><span>CLOUD FUNCTIONS</span><span>PWA</span><span>CLOUDFLARE WORKERS</span><span>RAZORPAY</span><span>GIT</span><span>HTML5</span><span>CSS3</span><span>JAVASCRIPT</span><span>FIREBASE</span><span>FIRESTORE</span><span>CLOUD FUNCTIONS</span><span>PWA</span><span>CLOUDFLARE WORKERS</span><span>RAZORPAY</span><span>GIT</span></div></div>
+
+<section id="work"><div class="w">
+  <h2>Selected work</h2>
+  <p class="sub">Two products I designed, built, deployed and maintain on my own.</p>
+
+  <article class="proj">
+    <img src="AdhyoraWeb3.png" alt="Adhyora web portal screenshot" loading="lazy">
+    <div>
+      <p class="mono">SaaS &middot; PWA &middot; Live at a college</p>
+      <h3>Adhyora</h3>
+      <p>A college management platform with five role-based portals: Principal, Teacher (with extra HOD options), Staff, Accountant and Student. It covers realtime attendance, timetables, chat, assignments with reminders and teacher dashboards. It supports both NEP and traditional syllabus structures. One college uses it today and more are evaluating it.</p>
+      <ul><li>Principals watch attendance live, including which teachers have not marked yet</li><li>Configurable attendance logic: session, hour or subject-based calculation</li><li>College-scoped Firestore security rules, push notifications, Razorpay payments, installable PWA</li></ul>
+      <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase Auth</span><span>Firestore</span><span>Cloud Functions</span><span>FCM</span><span>Cloudflare Workers</span><span>Razorpay</span><span>Security Rules</span><span>RBAC</span></div>
+      <div class="btns"><a class="btn m" href="https://pixelaks.in/adhyora" target="_blank" rel="noopener">View Adhyora</a></div>
+    </div>
+  </article>
+
+  <article class="proj">
+    <img src="dod-poster.png" alt="Deck of Deception poster" loading="lazy">
+    <div>
+      <p class="mono">Realtime multiplayer &middot; Browser game</p>
+      <h3>Deck of Deception</h3>
+      <p>A social card game about trust and bluffing that runs entirely in the browser. Players steal, drain and lie across the table, with proximity voice chat so everyone hears every lie.</p>
+      <ul><li>Turn-based game logic synced between players in realtime</li><li>Dynamic UI and voice chat in the browser</li><li>Designed, built and deployed solo</li></ul>
+      <div class="tags"><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Firebase</span><span>Realtime sync</span></div>
+      <div class="btns"><a class="btn m" href="https://deckofdeception.pixelaks.in" target="_blank" rel="noopener">Play it</a><a class="btn" href="https://youtu.be/T5BOuxtjLXo" target="_blank" rel="noopener">Trailer</a></div>
+    </div>
+  </article>
+</div></section>
+
+<section id="inside"><div class="w">
+  <h2>Inside Adhyora</h2>
+  <p class="sub">One platform, five portals. Pick a role to see what each user gets.</p>
+  <div class="tabs" id="tabs"><button class="on" data-r="Principal">Principal</button><button data-r="Teacher">Teacher</button><button data-r="HOD">HOD</button><button data-r="Student">Student</button><button data-r="Staff">Staff</button><button data-r="Accountant">Accountant</button></div>
+  <div class="demo">
+    <div class="pane"><h4 id="rt"></h4><ul id="rl"></ul></div>
+    <div class="pane"><p class="mono" style="margin-bottom:8px">// how data moves</p><div class="flow" id="rf"></div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="w">
+  <h2>Skills</h2>
+  <p class="sub">What I use day to day, and what I am learning next.</p>
+  <div class="grid">
+    <div class="card"><h4>Frontend</h4><ul><li>HTML5, CSS3</li><li>JavaScript (ES6+)</li><li>Progressive Web Apps</li><li>Responsive UI, animation</li></ul></div>
+    <div class="card"><h4>Backend &amp; Cloud</h4><ul><li>Firebase Auth, Firestore, Realtime Database</li><li>Cloud Functions, Cloud Messaging</li><li>Cloudflare Workers</li><li>Razorpay integration</li></ul></div>
+    <div class="card"><h4>Tools</h4><ul><li>Git, GitHub, GitHub Pages</li><li>Unity and C# (game development)</li><li>AI tools for faster building, with every change reviewed by hand</li></ul></div>
+    <div class="card learn"><h4>Currently learning</h4><ul><li>React</li></ul></div>
+  </div>
+</div></section>
+
+<section id="path"><div class="w">
+  <h2>Path</h2>
+  <p class="sub">A game developer who moved his best work onto the web.</p>
+  <div class="row"><span>2019 to present</span><p><b>Pixelaks Technologies, solo.</b> Independent developer. Built and shipped Adhyora and Deck of Deception end to end: architecture, UI, backend, payments, deployment and ongoing maintenance.</p></div>
+  <div class="row"><span>Jul 2025 to Feb 2026</span><p><b>Associate Game Developer, Anadae, Kochi.</b> Built Photon-based real-time multiplayer (matchmaking, rooms, player sync), wrote design documents and worked in a cross-functional team until the company shut down.</p></div>
+  <div class="row"><span>Since 2019</span><p><b>Unity and C# games.</b> Published Into The Fantasy on Google Play and built games for PC and mobile, which is where I learned to ship products and own them after launch.</p></div>
+  <div class="row"><span>2022 to 2025</span><p><b>B.Sc. Computer Science,</b> Pondicherry University (MGGAC).</p></div>
+</div></section>
+
+<footer id="contact"><div class="w">
+  <h2>Contact</h2>
+  <p class="sub">Open to web development roles and freelance projects.</p>
+  <div class="btns">
+    <a class="btn m" href="mailto:anaghsatheesh04@gmail.com">anaghsatheesh04@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/anagh-k-satheesh-3914b0253" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/anaghksatheesh" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://anagh.pixelaks.in">Game dev portfolio</a>
+  </div>
+</div></footer>
+<script>
+(function(){
+var L=[["const anagh = {"],["  role: ",["s","'Web Developer'"],","],["  stack: [",["s","'HTML'"],", ",["s","'CSS'"],", ",["s","'JavaScript'"],", ",["s","'Firebase'"],"],"],["  shipped: [",["s","'Adhyora'"],", ",["s","'Deck of Deception'"],"],"],["  learning: ",["s","'React'"],","],["  openToWork: ",["k","true"]],["};"]];
+var html="",plain=[];
+L.forEach(function(l){var h="",t="";l.forEach(function(p){if(typeof p==="string"){h+=p;t+=p}else{h+='<span class="'+p[0]+'">'+p[1]+'</span>';t+=p[1]}});html+=h+"\n";plain.push(t)});
+var el=document.getElementById("code");
+if(window.matchMedia("(prefers-reduced-motion:reduce)").matches){el.innerHTML=html.replace("const","<span class='k'>const</span>");}
+else{var full=html.replace("const","<span class='k'>const</span>");var tags=[],i=0,out="";
+ (function tick(){if(i>=full.length){el.innerHTML=out+'<span class="cur"></span>';return}
+  if(full[i]==="<"){var e=full.indexOf(">",i);out+=full.slice(i,e+1);i=e+1;return tick()}
+  out+=full[i++];el.innerHTML=out+'<span class="cur"></span>';setTimeout(tick,18)})();}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll("section h2,.sub,.proj,.card,.row,.demo,.tabs").forEach(function(n){n.classList.add("rv");io.observe(n)});
+document.querySelectorAll(".proj img").forEach(function(im){
+ im.addEventListener("mousemove",function(ev){var r=im.getBoundingClientRect(),x=(ev.clientX-r.left)/r.width-.5,y=(ev.clientY-r.top)/r.height-.5;im.style.transform="perspective(700px) rotateY("+x*8+"deg) rotateX("+(-y*8)+"deg) scale(1.02)"});
+ im.addEventListener("mouseleave",function(){im.style.transform=""})});
+var R={Principal:{l:["Live attendance view: who is present, who is absent","See whether each teacher has marked attendance yet","Onboard students and teachers, assign departments and years, approve or revoke access","Search students for semester-wise attendance and internal marks","Publish the academic calendar and export data to Excel"],f:"teacher marks attendance<br>&rarr; Firestore updates in realtime<br>&rarr; principal dashboard refreshes"},
+Teacher:{l:["Mark attendance by department and year in realtime","Create assignments with due dates and reminders","View timetables and the college calendar","Chat with students and colleagues","Dashboard of classes taken, down to the exact hour","Record internal marks, with CE marks calculated automatically"],f:"assignment published<br>&rarr; Cloud Function runs<br>&rarr; FCM push to students"},
+HOD:{l:["Everything in the Teacher UI, plus special HOD options","Manage year-wise timetables for the department","Define working and non-working days, which control when attendance can be marked"],f:"HOD sets working days<br>&rarr; stored in Firestore<br>&rarr; attendance unlocks only on those days"},
+Student:{l:["Attendance percentage, classes held, attended, absent and CE marks","Period-wise status, with when it was marked and by which teacher","Assignments with due dates, timetable and college calendar","Instant push notifications <span class='bell'>&#128276;</span>"],f:"teacher marks a period<br>&rarr; Firestore updates<br>&rarr; student sees it live"},
+Staff:{l:["Dedicated Staff portal with its own role-based access"],f:"login via Firebase Auth<br>&rarr; role checked<br>&rarr; Staff portal opens"},
+Accountant:{l:["Dedicated Accountant portal with its own role-based access","Fee management and payments, with Razorpay"],f:"login via Firebase Auth<br>&rarr; role checked<br>&rarr; Accountant portal opens"}};
+function show(r){document.getElementById("rt").textContent=r+" portal";document.getElementById("rl").innerHTML=R[r].l.map(function(x){return"<li>"+x+"</li>"}).join("");document.getElementById("rf").innerHTML=R[r].f}
+document.getElementById("tabs").addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;this.querySelectorAll("button").forEach(function(x){x.classList.remove("on")});b.classList.add("on");show(b.dataset.r)});
+show("Principal");
+})();
+</script>
+</body>
+</html>
